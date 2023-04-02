@@ -1,11 +1,13 @@
 package fragments;
 
+
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -67,8 +69,11 @@ public class SecondFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_first, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_second, container, false);
+        TextView textView = rootView.findViewById(R.id.tv2);
+        textView.setText(TAG+ " layout");
         Log.d(TAG,"on CreateView()");
+
         return rootView;
     }
 
